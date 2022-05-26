@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <title>Hello World</title>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <p>1. If elements are too tight set it on landscape</p>
+        <p>2. Watch directly to the cross back and forth until you stop seeing the blinking circle.</p>
+        <p>3. You have spotted your blind spot!</p>
+        <div id="left" class="circle left"></div>
+        <div id="cross">+</div>
+        <div id="right" class="circle right"></div>
+
+    </body>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+        .circle {
+            border-radius: 50%;
+            height:     5vw;
+            width:      5vw;
+            transform: translateY(-50%);
+            background-color: white;
+            position: absolute;;
+        }
+        .left {
+            left: 0;
+            top: 50%;
+        }
+        .right {
+            right: 0;
+            top: 50%;
+        }
+        #cross {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            color: yellow;
+        }
+    </style>
+</html>
